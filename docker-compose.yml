@@ -1,13 +1,12 @@
-version: '3.9'
-
 services:
   api:
-    image: mcr.microsoft.com/devcontainers/typescript-node:1-18-bookworm
+    build: .
     container_name: microservice-email
     ports:
       - '3333:3333'
     volumes:
-      - ./api
+      - .:/workspace
+    working_dir: /workspace
     depends_on:
       - 'redis'
 
