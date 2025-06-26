@@ -23,6 +23,16 @@ services:
           cpus: '0.1'
           memory: '10M'
 
+  redis-worker:
+    build: .
+    container_name: microservice-redis-worker
+    command: npx nest start redis --watch
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    depends_on:
+      - 'redis'
+
 networks:
   default:
     name: nestjs_redis_bull_network_default
