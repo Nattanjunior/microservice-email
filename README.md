@@ -1,5 +1,3 @@
-
-
 # Microservice Email Sending — Monorepo NestJS + Redis + Bull + Docker
 
 Este projeto é um monorepo NestJS que implementa uma arquitetura de microserviços para envio assíncrono de e-mails, utilizando Redis como broker e Bull para filas. O repositório contém:
@@ -7,6 +5,16 @@ Este projeto é um monorepo NestJS que implementa uma arquitetura de microservi�
 - **API**: Recebe requisições HTTP, cadastra usuários e emite eventos de envio de e-mail.
 - **Redis Worker**: Microserviço que consome eventos, enfileira e processa o envio de e-mails.
 - **Redis**: Banco de dados em memória usado como broker de mensagens e backend do Bull.
+
+---
+
+## Documentação Interativa (Swagger)
+
+A API expõe uma documentação interativa via Swagger, facilitando a exploração e o teste dos endpoints HTTP.
+
+- **Acesse em:** [http://localhost:3333/api](http://localhost:3333/api) (quando a API estiver rodando)
+- Permite visualizar, testar e entender todos os endpoints disponíveis.
+- Útil para desenvolvedores e integradores.
 
 ---
 
